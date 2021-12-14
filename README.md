@@ -1,4 +1,5 @@
 # FBI Missing Persons Search Engine
+### Team: Sasha Kenkre and Bulgan Judgerkhuu
 
 This is a final project for SI650/EECS 649 at UMSI for Fall 2021.
     
