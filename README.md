@@ -22,6 +22,8 @@ This project looks at the [FBI's Missing Person Database](https://www.fbi.gov/wa
 * keras-vggface==0.6
 * pickle-mixin==1.0.2
 
+If you have issues installing keras, check out this [StackOverflow post] (https://stackoverflow.com/questions/68862735/keras-vggface-no-module-named-keras-engine-topology).
+
 # How to Run the Program
 
 **Step 1: Download all files and unzip static folder**
