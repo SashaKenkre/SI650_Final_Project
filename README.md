@@ -25,7 +25,8 @@ This project looks at the [FBI's Missing Person Database](https://www.fbi.gov/wa
 # How to Run the Program
 
 **Step 1: Download all files and unzip static folder**
-Download the files provided in this repo and make sure all files and folders are stored in the same place.
+
+Download the files provided in this repo, unzip the folder, and make sure all files and folders are stored in the same place. Make sure to move to the correct folder location in your terminal where you've housed all these unzipped files.
 
 **Step 2: Install packages**
 ```
@@ -33,7 +34,7 @@ $ pip3 install -r requirements.txt
 ```
 You can install the provided requirements.txt file. You may need to adjust the code above for installing the packages depending on your OS. 
 
-**Step 3: Run final_project.py**
+**Step 3: Run project_flask.py**
 ```
 $ python3 project_flask.py
 ```
