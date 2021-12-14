@@ -1,0 +1,12 @@
+pandas==1.2.1
+numpy==1.19.5
+requests==2.25.1
+Flask==1.1.2
+Werkzeug==1.0.1
+nltk==3.5
+rank-bm25==0.2.1
+mtcnn==0.1.1
+Pillow==8.1.0
+scipy==1.6.1
+keras-vggface==0.6
+pickle-mixin==1.0.2
