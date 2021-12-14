@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="../static/images/fbi_logo.png">
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/html5reset.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600">
+	<title>MISSING PERSONS SEARCH</title>
+</head>
+<body>
+	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+	<header>
+		<div class="header_img">
+			<img id="logo" src="../static/images/fbi_logo.png" alt="FBI logo">
+			<h1 id="title_text">FBI MISSING PERSONS SEARCH ENGINE</h1>
+		</div></div>
+	</header>
+	<main id="main">
+		<div class="container">
+			<!-- <p>Type in your search query (description, name, etc.) for information on a missing person.</p>  -->
+			<!-- <p>Feel free to click on a button below to jump to the section you'd like to view.</p><br> -->
+			<!-- <div id="skip_links">
+			<a class="skip_links_style" href="#vis1">Top Movies Based on Genre</a>
+			<a class="skip_links_style" href="#vis2">Movies Across Box Office Variables</a>
+			<a class="skip_links_style" href="#vis3">Top Movies Based on IMDb Rating</a>
+			<a class="skip_links_style" href="#vis4">Top Directors Based on Birth Country</a>
+			</div> -->
+			<div id="vis1"></div>
+			<div class="vis">
+				<h2>Input Text Based Search Here</h2>
+				<div class="line"></div>
+			<form action='/top_text_results' method='POST'>
+				<section>
+				<p>Enter your search (description, name, etc.): <input name="text_search" type="text" placeholder="(Enter your search)"/><br>
+					 </p>
+					<div class=set_button>
+					<button>Search</button>
+					</div>
+				</section>
+				</form>
+			</div>
+			<br>
+			<div id="vis2"></div>
+			<div class="vis">
+				<h2>Search Based on Name</h2>
+				<div class="line"></div>
+				<form action='/choose_name' method='POST'>
+					<section>
+					<p>Choose the name of a missing person you would like more info on: 
+						<select name="missing_names">
+							{% for m in missing_names %}
+							<option value="{{m}}">{{m}}</option>
+							{% endfor %}
+							</select>.
+						</p>
+						<div class=set_button>
+							<button>Search</button>
+						</div>
+					</section>
+				</form> 
+			</div>
+			<br> 
+			<div id="vis3"></div>
+			<div class="vis"> 
+				<h2>Upload an Image for Image Search</h2>
+				<strong><center>A work in progress...</center></strong>
+				<div class="line"></div>
+				<form method="post" action="/image_search" enctype="multipart/form-data">
+					<dl>
+						<p>
+							<input type="file" name="file" autocomplete="off" required>
+						</p>
+					</dl>
+					<p>
+						<input type="submit" value="Submit">
+					</p>
+				</form>
+				
+				<!-- <h2>Movies Based on IMDb Rating</h2>
+				<div class="line"></div>
+				<form action='/ratings' method='POST'>
+					<section>
+					<p>I would like to see all movies with a rating of 
+						<select name="ratings">
+							{% for r in ratings %}
+							<option value="{{r}}" {% if r == "ratings" %} selected {% endif %}>{{r}}</option>
+							{% endfor %}
+							</select>.
+						</p>
+						<div class=set_button>
+							<button>Get Movies</button>
+						</div>
+					</section>
+				</form>
+			</div> -->
+			<br>
+		<div class="jump_to_top">
+			<a class="jump_link" href="#main">Jump to Top</a>
+		</div>
+	</main>
+
+	<footer>
+		<p>Bulgan Jugderkhuu and Sasha Kenkre &copy; 2021</p>
+		</div>
+	</footer>
+
+</body>
+</html>
