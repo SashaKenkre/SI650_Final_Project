@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="shortcut icon" type="image/png" href="../static/images/fbi_logo.png">
+	    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/html5reset.css') }}">
+	    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600">
+	    <title>Top Search Results</title>
+    </head>
+   <body>
+       <main id="main">
+        <div class="container">
+            <h1> Top Search Results </h1>
+            <div class="line"></div>
+              {% if num == 0 %}
+              <p class="instructions">Your query was <i>{{desc}}</i>. 
+                <br> 
+                No results found! Please go back and try a new search.</p>
+              <br>
+              {% else %}
+              <p class="instructions">Your query was <i>{{desc}}</i>. 
+                <br>
+                Here are the <strong>top {{num}} results</strong> in your search. Click on a row to learn more about the person.</p>
+              {% endif %}
+        <div class="table_view">
+        <table> 
+         <thead>
+            <td>Name</td>
+            <td>Subject</td>
+            <td>Sex</td>
+            <td>Race</td>
+            <td>Hair Color</td>
+            <td>Eye Color</td>
+            <td>Scars and Marks</td>
+            <td>Details</td>
+            <td>Description</td>
+            <td>Field Office(s)</td>
+            <td>URL</td>
+         </thead>
+         {% if r1 != None %}
+         <tbody>
+        
+         {% for row in r1 %}
+          <tr onclick="window.open(href='{{row[10]}}')">
+          <td>{{row[0]}}</td>
+          <td>{{row[1]}}</td>
+          <td>{{row[2]}}</td>
+          <td>{{row[3]}}</td>
+          <td>{{row[4]}}</td>
+          <td>{{row[5]}}</td>
+          <td>{{row[6]}}</td>
+          <td>{{row[7]}}</td>
+          <td>{{row[8]}}</td>
+          <td>{{row[9]}}</td>
+          <td>{{row[10]}}</td>
+         </tr>
+         {% endfor %}
+        </tbody>
+        {% else %}
+        
+        {% endif %}
+        {% if r2 != None %}
+        <tbody>
+          {% for ro in r2 %}
+          <tr onclick="window.open(href='{{ro[10]}}')">
+            <td>{{ro[0]}}</td>
+            <td>{{ro[1]}}</td>
+            <td>{{ro[2]}}</td>
+            <td>{{ro[3]}}</td>
+            <td>{{ro[4]}}</td>
+            <td>{{ro[5]}}</td>
+            <td>{{ro[6]}}</td>
+            <td>{{ro[7]}}</td>
+            <td>{{ro[8]}}</td>
+            <td>{{ro[9]}}</td>
+            <td>{{ro[10]}}</td>
+          </tr>
+          {% endfor %}
+         </tbody>
+         {% else %}
+        
+         {% endif %}
+         {% if r3 != None %}
+         <tbody>
+          {% for rr in r3 %}
+          <tr onclick="window.open(href='{{rr[10]}}')">
+             <td>{{rr[0]}}</td>
+             <td>{{rr[1]}}</td>
+             <td>{{rr[2]}}</td>
+             <td>{{rr[3]}}</td>
+             <td>{{rr[4]}}</td>
+             <td>{{rr[5]}}</td>
+             <td>{{rr[6]}}</td>
+             <td>{{rr[7]}}</td>
+             <td>{{rr[8]}}</td>
+             <td>{{rr[9]}}</td>
+             <td>{{rr[10]}}</td>
+          </tr>
+          {% endfor %}
+         </tbody>
+         {% else %}
+        
+         {% endif %}
+      </table>
+    </div>
+      <div class="set_button">
+      <form action="/">
+        <input class="button_style" type="submit" value="Go back to home page" />
+    </form>
+    </div>
+      </div>
+      <div class="jump_to_top">
+        <a class="jump_link" href="#main">Jump to Top</a>
+      </div>
+      </main>
+      <footer>
+        <p>Bulgan Jugderkhuu and Sasha Kenkre &copy; 2021</p>
+        </div>
+      </footer>
+   </body>
+</html>
