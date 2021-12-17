@@ -3,7 +3,7 @@ numpy==1.19.5
 requests==2.25.1
 Flask==1.1.2
 Werkzeug==1.0.1
-nltk==3.5
+nltk==3.6.5
 rank-bm25==0.2.1
 mtcnn==0.1.1
 Pillow==8.1.0
