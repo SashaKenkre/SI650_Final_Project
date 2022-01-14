@@ -20,6 +20,7 @@ This project looks at the [FBI's Missing Person Database](https://www.fbi.gov/wa
 * Pillow==8.1.0
 * scipy==1.6.1
 * keras-vggface==0.6
+* Keras-Applications==1.0.8
 * pickle-mixin==1.0.2
 
 If you have issues installing keras, check out this [StackOverflow post](https://stackoverflow.com/questions/68862735/keras-vggface-no-module-named-keras-engine-topology).
